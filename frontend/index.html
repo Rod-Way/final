@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="src/mushroom.png" type="image/x-icon">
+    <title>Disturbed calculator</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Calculator</h1>
+        <p class="tiny">Made by RodWay</p>
+        <div id="images">
+            <a><img id="mongo" class="right" src="src/MonGO.png" alt="MonGo img"></a>
+            <a><img id="mushroom" class="left" src="src/mushroom.png" alt="Rodway?"></a>
+        </div>
+    </div>
+    <div id="buttons-row">
+        <p class="tiny"></p>
+        <button id="expressions-button" onclick="showContent('expressions')">Expressions</button>
+        <button id="operations-button" onclick="showContent('operations')">Operations</button>
+        <button id="agents-button" onclick="showContent('agents')">Agents</button>
+    </div>
+    <main>
+        <div id="expressions">
+            <input id="expressionInput" type="text" placeholder="Enter the expression to calculate" required>
+            <div id="expressions-cards"></div>
+        </div>
+
+        <div id="operations">
+            <form id="operationsTimeForm">
+                <label class="tiny">operation execution time +</label>
+                <input id="plus"        type="number" placeholder="Enter number" required min="0">
+                <label class="tiny">operation execution time -</label>
+                <input id="minus"       type="number" placeholder="Enter number" required min="0">
+                <label class="tiny">operation execution time *</label>
+                <input id="multiply"    type="number" placeholder="Enter number" required min="0">
+                <label class="tiny">operation execution time /</label>
+                <input id="divide"      type="number" placeholder="Enter number" required min="0">
+                <label class="tiny">the display time of inactive server</label>
+                <input id="agent"       type="number" placeholder="Enter number" required min="0">
+                <input class="submit-button" type="submit" value="SUBMIT">
+            </form>
+        </div>
+
+        <div id="agents">
+            <div id="agents-cards"></div>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
